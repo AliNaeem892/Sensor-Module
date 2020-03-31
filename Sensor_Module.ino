@@ -11,6 +11,7 @@ void setup() {
 void loop() {
 
  output_value = analogRead(sensor_pin); 
+ output_value = map(output_value,0,1023,100,0);
  Serial.println("output_value");
  if ( output_value<35) { digitalWrite(led, LOW);}
 
